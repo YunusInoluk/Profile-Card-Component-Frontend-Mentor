@@ -1,96 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height: 100vh;
-    background-color: hsl(185, 75%, 39%);
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: hsl(185, 75%, 39%);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.card{
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 325px;
-    height: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #fff;
+.card {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  height: 375px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
 }
-.card .top{
-    width: 100%;
-    height: 35%;
-    background-image: url(./images/bg-pattern-card.svg);
-    background-size: contain;
+.card .top {
+  width: 100%;
+  height: 35%;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-size: contain;
 }
-.card .mid{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card .mid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.card img{
-    margin-top: -75px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    margin-bottom: 25px;
+.card img {
+  margin-top: -75px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 25px;
 }
-.card h3{
-    margin-bottom: 20px;
-    font-weight: 400;
+.card h3 {
+  margin-bottom: 20px;
+  font-weight: 400;
 }
-.card .location{
-    font-size: 14px;
+.card .location {
+  font-size: 14px;
 }
 .card .bottom {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 25%;
-    border-top: 1px solid gray;
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  border-top: 1px solid gray;
 }
-.card .bottom .statistic{
-    
-    text-align: center;
+.card .bottom .statistic {
+  text-align: center;
 }
 .card .bottom .statistic .stats {
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: gray;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: gray;
 }
-.c1{
-    position: absolute;
-    top: -54%;
-    left: -90%;
-    width: 700px;
-    height: auto;
-    z-index: 0;
+.c-t,
+.c-b {
+  position: absolute;
+  z-index: 0;
 }
-.c2{
-    position: absolute;
-    bottom: -34%;
-    right: -75%;
-    width: 600px;
-    height: auto;
-    z-index: 0;
+.c-t {
+  transform: translate(-35%, -55%);
 }
-.author{
-    position: absolute;
-    bottom: 0;
-    margin: 0 auto;
-    font-size: 10px;
+.c-b {
+  bottom: 0;
+  right: 0;
+
+  transform: translate(30%, 65%);
+}
+@media (max-width: 500px) {
+  .c-b {
+    transform: translate(70%, 65%);
+  }
+}
+.author {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  font-size: 10px;
 }
